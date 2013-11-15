@@ -1,0 +1,19 @@
+
+body{margin:0px;}
+html{height:100%;}
+#global {position:absolute; width:200%; height:200%;}
+
+/*Alle blokke*/
+#v1, #v1, #h1, #h2{width:50%;height:50%;}
+
+/* Venstre blokke */
+#v1{position:absolute;left:0%; top:0%;background:#ccc;}
+#v2{position:absolute;left:0%; top:50%;background:#ddd;}
+/* Højre blokke */
+#h1{position:absolute;left:50%; top:0%;background:#000;}
+#h2{position:absolute;left:50%; top:50%;background:#555;}
+
+.goRight {-webkit-transform:translateX(-50%); transition-duration: 2s;}
+.goLeft {-webkit-transform:translate(0%, -50%); transition-duration: 2s;}
+.goUp {-webkit-transform:translateY(0%); transition-duration: 2s;}
+.goDown {-webkit-transform:translate(-50%,-50%); transition-duration: 2s;}

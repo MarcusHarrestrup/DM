@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<!-- HTML Canvas -->
+<HTML>
+    <head>
+        <script src="dag04_05.js" type="text/javascript"></script>
+        <script src="Haversine.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <h1>HTML5 Geolocation Distance Tracker</h1>
+        <p id="status">HTML5 Geolocation is <strong>not</strong> supported in your browser.</p>
+        <h2>Current Position:</h2>
+        <table border="1">
+            <tr>
+                <th width="40" scope="col">Latitude</th>
+                <td width="114" id="latitude">?</td>
+            </tr>
+            <tr>
+                <td> Longitude</td>
+                <td id="longitude">?</td>
+            </tr>
+            <tr>
+                <td>Accuracy</td>
+                <td id="accuracy">?</td>
+            </tr>
+            <tr>
+                <td>Last Timestamp</td>
+                <td id="timestamp">?</td>
+            </tr>
+        </table>
+        <h4 id="currDist">Current distance traveled: 0.0 km</h4>
+        <h4 id="totalDist">Total distance traveled: 0.0 km</h4>
+    </body>
+</HTML>

@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<!--    Jquery 
+        DOM Travesering
+        Event Handling
+        Ajax
+-->
+<HTML>
+    <head>
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <style>
+            .yellow {background: yellow;}
+        </style>
+    </head>
+    <body>
+        <section>
+            <fieldset>
+                <legend>DOM Traversering</legend>
+                <h2>DOM Traversering</h2>
+                <button id="Knap1" class="knapKlasse1" value="Knap">Tryk Mig</button>
+                <button id="Knap2" class="knapKlasse2" value="Knap">Tryk Mig</button>
+                
+                <script>
+                    //DOM Travesering og Manipulation ved brug af Jquery og traditionel JavaScript
+                    document.getElementById("Knap1").innerHTML = "Tryk mig nu 1";
+                    $( "button.knapKlasse2" ).html( "Tryk mig nu 2" )
+                </script>
+            </fieldset>
+        </section>
+        
+        <section>
+            <fieldset>
+                <legend>Event Handling</legend>
+                <h2>Event Handling</h2>
+                <p id="banner-message" style="display:none">Text</p>
+                <div id="button-container">
+                    <button>Tryk mig</button>
+                </div>
+                <script>
+                    //Event handling. Viser p-elementet "banner-message", som er CSS gemt (display:none),
+                    //når der trykkes på en vilkårlig knap som befinder sig i boksen button-container.
+                    var hiddenBox = $( "#banner-message" ); // Variabel
+                    $( "#button-container button" ).on( "click", function( event ) {
+                    hiddenBox.show(); //http://api.jquery.com/show/
+                    });
+                </script>
+                <br>
+                <p style="display: none">Hello 2</p>
+                <script>
+                    $( "button" ).click(function() {
+                        $( "p" ).show( "slow" );
+                        $( "p" ).addClass("yellow");
+                    });
+                </script>
+            </fieldset>
+        </section>
+        <section>
+            <fieldset>
+                <legend>Ajax</legend>
+                <!-- Ajax - bruges til at lave Asynkrone HTTP forespørgsler -->
+                <!-- http://api.jquery.com/jQuery.ajax/ -->
+                <h2>Ajax</h2>
+                <script>
+                    //
+                    $.ajax({
+                        url: "dag04_01.html",
+                        beforeSend: function( xhr ) {
+                        xhr.overrideMimeType( "text/plain; charset=x-user-defined" );
+                        }
+                        })
+                        .done(function( data ) {
+                        if ( console && console.log ) {
+                        console.log( "Sample of data:", data.slice( 0, 1000 ) );
+                        }
+                        });
+                </script>
+            </fieldset>
+        </section>
+    </body>
+</HTML>

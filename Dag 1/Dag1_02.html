@@ -1,0 +1,28 @@
+<!Doctype html>
+<HTML>
+    <head>
+         <link href="Dag1_01.css" type="text/css" rel="stylesheet">
+        <script>
+            function musOver() {
+                   var x = document.getElementById("b1");
+                console.log(x);
+            }
+            function musUd() {
+                    document.getElementById("b1").setAttribute("class", "image");
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Test af funktioner</h1>
+        <section id="section1">
+            <img id="b1" class="image" src="img/hus.jpg" alt="alternativ tekst" onmouseover="musOver()" onmouseout="musUd()">
+            <img id="b2" class="image" src="img/hus.jpg" alt="alternativ tekst">
+        </section>
+        <section id="section2">
+            <img id="b3" class="image" src="img/hus.jpg" alt="alternativ tekst">
+            <img id="b4" class="image" src="img/hus.jpg" alt="alternativ tekst">
+            <img id="b5" class="image" src="img/hus.jpg" alt="alternativ tekst">
+            <img id="b6" class="image" src="img/hus.jpg" alt="alternativ tekst">
+        </section>
+    </body>
+</HTML>
